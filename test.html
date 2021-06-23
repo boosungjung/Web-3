@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .wrap{
+                width: 960px;
+                background: red;
+                margin: 0 auto;
+            }
+            .container{
+                width: 80%;
+                border: 2px solid skyblue;
+                margin: 0 auto
+            }
+            .container div{
+                float: left;
+            }
+            .container::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .container div:first-child{
+                width: 33.333%;
+                background: white;
+            }
+            .container div:last-child{
+                width: 33.333%;
+                float: right;
+                background: yellow;
+            } 
+
+
+
+
+            .box{
+                width: 100px;
+                margin: 0 auto;
+                background: red;
+                text-align: center;
+            }
+            .box::before{
+                content: 'before';
+                background: yellow;
+                display: block;
+            }
+            .box::after{
+                content: 'after';
+                background: skyblue;
+                display: block;
+            }
+
+
+            .box2{
+                margin: 100px auto;
+                width: 200px;
+                height: 100px;
+                background: #000;
+                color: black;
+                text-align: center;
+                line-height: 100px;
+            }
+            .box2:before{
+                content: 'hello';
+                display: block;
+                background: yellow;
+                color: black;
+            }
+            .box2:after{
+                content: 'hello';
+                display: block;
+                background: yellow;
+                margin-left: 10px;
+                color: black;
+            }
+        </style>
+    </head>
+    <section>
+        <div class="wrap">
+            <div class="container">
+                <div>This is some random text. Hello my name is John Cena 123. Thank you very much.</div>
+                <div>This is some random text. Hello my name is John Cena 123. Thank you very much.</div>
+            </div>
+        </div>
+        <div class="box">box</div>
+        <div class="box2">box2</div>
+    </section>
+</html>

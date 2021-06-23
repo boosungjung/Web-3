@@ -1,0 +1,28 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+body{
+    overflow-x: hidden;
+}
+div{
+    height: 100vh;
+    background: linear-gradient(45deg,coral,cornflowerblue);
+}
+div span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 12vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media screen and (max-width:767px){
+    div{
+        background: linear-gradient(-45deg,coral,cornflowerblue);
+    }
+    div span{
+        transform: translate(-50%,-50%) rotate(270deg);
+        transition: all ease 0.5s;
+    }
+}

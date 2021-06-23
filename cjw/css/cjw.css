@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+/*reset*/
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol{list-style-type: none;}
+hr{display: none;}
+h1{margin: 0;}
+a{text-decoration: none;}
+button{border: none; background: none; text-indent: -9999px; cursor: pointer;}
+img{border: none;}
+html{font-size: 0.625em;}
+body{font-family: Arial,"맑은 고딕", sans-serif; line-height: 1;}
+.blind{position: absolute; top: -9999px; left: -9999px;}
+.clear:after{content: ""; display: block; clear: both;}
+.pc{display: none;}
+
+/* header */
+.navWrap{
+    position: fixed; top: 0; left: 0;
+    background: white;
+    width: 100%; height: 75px;
+}
+h1{
+    width: 91px;
+    position: absolute; left: 50%; top: 21px;
+    transform: translateX(-50%);
+}
+h1 img{
+    width: 100%;
+}
+.searchWrap form > button{
+    position: absolute; top: 27px; left: 4.667%; /* button x pos = 35 searchWrap width = 750 hence, 35/750=4.667% */
+    width: 20px; height: 20px;
+    background: url(../img/cjw-icon-search1.png) no-repeat center/contain;
+}
+/* pdf 36page 34~53 lines */
+.searchOn{
+    position: absolute; top: 0; left: 0; z-index: 1;
+    width: 100%; height: 100%;
+    background: white;
+    text-align: center;
+    display: none; /* default */
+}
+.searchOn .close{
+    font-size: 1.7rem;
+    color: #959595;
+}
+.searchOn input{
+    border: none; border-radius: 3px;
+    background: #eeeeee;
+    width: 66.667%; height: 32px; margin: 22px 2.133% 0; padding: 8px;
+    font-size: 1.6rem;
+}
+.searchOn button{
+    width: 45px; height: 32px; border-radius: 3px;
+    background: #777 url(../img/cjw-icon-search2.png) no-repeat center/15px;
+    vertical-align: bottom;
+}
+.navBtn{
+    position: absolute; top: 29px; right: 4.667%;
+    width: 24px; height: 18px;
+}
+.navBtn span{
+    display: block;
+    height: 4px; margin: 3px 0; border-radius: 5px;
+    background: #000;
+}
+.navBtn:before, .navBtn:after{
+    content: "";
+    display: block;
+    height: 4px; border-radius: 5px;
+    background: #000;
+}
+header nav{
+    display: none; /* navigation on/off */
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+.navInner{
+    overflow: auto;
+    position: absolute; top: 0; right: 0;
+    width: 67.733%; height: 100%; padding-top: 31px;
+    background: white;
+}
+.navInner strong{
+    display: block;
+    width: 83.071%; /* 422/508 */
+    margin: 0 0 24px 7.087%; /* 36/508 */
+}
+.navInner strong span{
+    float: left;
+    width: 61px; height: 22px;
+}
+.navInner strong span a{
+    display: block;
+    background: url(../img/cjw-logo-header.png) no-repeat center/contain;
+    text-indent: -9999px;
+    height: 100%;
+}
+.navInner strong > a{
+    float: right;
+    color: #02b5d6; font-size: 1.3rem; line-height: 22px; font-weight: normal;
+}
+.navInner .right{
+    display: none;
+}
+.navInner ul{
+    width: 83.071%;
+    margin-left: 7.087%;
+    border-top: 2px solid #595959;
+}
+.navInner ul>li>a{
+    display: block; position: relative;
+    height: 59px; padding-left: 4.502%;
+    border-bottom: 1px solid #959595;
+    color: #595959;
+    line-height: 59px;
+    font-size: 1.7rem;
+}
+.navInner ul>li:last-child > a{
+    border-bottom: none;
+}
+.navInner ul>li:last-child.open > a{
+    border-bottom: 1px solid #959595;
+}
+.navInner ul>li.open + li > a{
+    border-top: 1px solid #959595;
+}
+.navInner ul>li>a:after{
+    content: "";
+    position: absolute; right: 2.844%; top: 50%;
+    transform: translateY(-50%);
+    width: 15px; height: 8px;
+    background: url(../img/cjw-arrow-nav-bottom.png) no-repeat center/contain;
+}
+.navInner ul>li.open>a:after{
+    background-image: url(../img/cjw-arrow-nav-top.png);
+}
+.navInner .wrap{
+    display: none;
+}
+.navInner .open .wrap{
+    display: block;
+}
+.navInner ol{
+    background: #f8f8f8;
+}
+.navInner ol li{
+    width: 89.573%; /* 378/422 */
+    border-bottom: 1px solid #cfcfcf;
+    margin-left: 4.502%;
+}
+.navInner ol:last-child li:last-child{
+    border-bottom: none;
+}
+.navInner ol a{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    color: #747474;
+    font-size: 1.4rem;
+    padding-left: 5.82%;
+}
+.navInner > a{
+    display: block; position: relative;
+    height: 58px;
+    line-height: 58px;
+    background: #02b5d6;
+    font-size: 1.7rem;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    padding-left: 10.827%;
+}
+.navInner > a::after{
+    content: "";
+    position: absolute; top: 50%; transform: translateY(-50%); right: 10.433%;
+    width: 27px; height: 27px;
+    background: url(../img/cjw-icon-login.png) no-repeat center/contain;
+}
+.navInner > a:last-child:after{
+    background-image: url(../img/cjw-icon-phone.png);
+}
+.visual{
+    height: 550px; margin-top: 75px; padding-top: 172px;
+    background: url(../img/cjw-bg-main.jpg) no-repeat center/cover;
+    text-align: center;
+}

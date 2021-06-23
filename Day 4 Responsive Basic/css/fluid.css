@@ -1,0 +1,79 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+h1, h2{
+    margin: 20px 0;
+    text-align: center;
+}
+.basic .wrap{
+    width: 80% /*960px*/;
+    border: 2px solid red;
+    margin: 0 auto
+}
+.basic .container{
+    width: 93.75% /*900px*/;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+.basic .container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.basic .container div{
+    display: block;
+    float: left;
+}
+.basic .container div:first-child{
+    width: 33.333%;
+    background: black;
+    color: white;
+}
+.basic .container div:last-child{
+    width: 66.667%;
+    background: silver;
+}
+
+/*가변 마지*/
+.margin .wrap{
+    width: 80%; margin: 0 auto; border: 2px solid red;
+}
+.margin .wrap::after{
+    content: ""; display: block; clear: both;
+}
+.margin .wrap div{
+    float: left;
+    width: 31.25% /*300px*/;
+}
+.margin .wrap div:first-child{
+    background: cornflowerblue;
+    margin-right: 37.5% /*360px*/;
+}
+.margin .wrap div:last-child{
+    background: bisque;
+}
+
+
+/*가변패딩*/
+.padding .wrap{
+    width: 80%; /*960px*/
+    margin: 0 auto;
+    border: 2px solid red;
+}
+.padding .wrap:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.padding .wrap div{
+    float: left;
+    width: 31.25%;
+}
+.padding .wrap div:first-child{
+    padding: 50px 5.208%; /*50/960*/
+    background: pink;
+    color: white;
+}
+.padding .wrap div:last-child{
+    padding: 130px 13.542%;
+    background: skyblue;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Media Query</title>
+        <style>
+            body{
+                background: black;
+                color: white;
+            }
+            h1{
+                color: gold;
+            }
+            p::first-letter{
+                color: gold;
+                font-size: 1.5em;
+            }
+            @media screen and (min-width:901px){
+                body{
+                    background: #ccc;
+                    color: black;
+                }
+                p::first-letter{
+                    color: indigo;
+                }
+            }
+            @media screen and (min-width:601px) and (max-width:900px){
+                body{
+                    background: gray;
+                }
+            }
+            @media screen and (max-width:600px){
+                body{
+                    background: darkgreen;
+                }
+                h1,p::first-letter{
+                    color: orange;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Media Query</h1>
+        <p>1. The @media rule is used in media queries to apply different styles for different media types/devices.</p>
+        <p>2. Media queries can be used to check many things, such as:</p>
+        <ul>
+            <li>width and height of the viewport</li>
+            <li>width and height of the device</li>
+            <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+            <li>resolution</li>
+        </ul>
+        <p>3. Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.</p>
+        <p>4. You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).</p>
+        <p>5. In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.</p>
+    </body>
+</html>
