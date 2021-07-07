@@ -1,5 +1,9 @@
 @charset "utf-8";
-
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@font-face {
+    font-family: nbgR;
+    src: url(NanumBarunGothic.woff) format('woff');
+}
 /*reset*/
 
 *{margin: 0; padding: 0; box-sizing: border-box;}
@@ -14,10 +18,12 @@ body{font-family: Arial,"맑은 고딕", sans-serif; line-height: 1;}
 .blind{position: absolute; top: -9999px; left: -9999px;}
 .clear:after{content: ""; display: block; clear: both;}
 .pc{display: none;}
+body{font-family: 'nbgR', 'sans-serif'; }
+
 
 /* header */
 .navWrap{
-    position: fixed; top: 0; left: 0;
+    position: fixed; top: 0; left: 0; z-index: 1;
     background: white;
     width: 100%; height: 75px;
 }
@@ -40,7 +46,7 @@ h1 img{
     width: 100%; height: 100%;
     background: white;
     text-align: center;
-    display: none; /* default */
+    display: none; /* search on/off */
 }
 .searchOn .close{
     font-size: 1.7rem;
@@ -168,6 +174,7 @@ header nav{
     height: 58px;
     line-height: 58px;
     background: #02b5d6;
+    color: #fff;
     font-size: 1.7rem;
     border-bottom: 2px solid rgba(255,255,255,0.5);
     padding-left: 10.827%;
@@ -186,3 +193,1175 @@ header nav{
     background: url(../img/cjw-bg-main.jpg) no-repeat center/cover;
     text-align: center;
 }
+/* slider */
+.visual div:first-child ~ div{
+    display: none;
+}
+.visual i{
+    display: block;
+    color: white;
+    margin-bottom: 13px;
+    font-size: 1.8rem; font-style: normal;
+}
+.visual i span:first-child{
+    color: #81ebff;
+}
+.visual i span:last-child{
+    color: #fff857;
+}
+.visual b{
+    color: #fff; font-size: 4.3rem; font-weight: normal;
+}
+.visual p{
+    width: 79.467%; margin: 20px auto 32px;
+    color: white; font-size: 1.4rem; line-height: 1.286;
+}
+.visual a{
+    display: inline-block;
+    width: 311px;
+    height: 50px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 3px; border: 2px solid rgba(255, 255, 255, 0.6);
+    line-height: 48px; color: white; font-size: 1.5rem;
+    
+}
+
+/* section */
+.section{
+    height: 50px; border-bottom: 1px solid #959595;
+    background: #fff;
+    text-align: center;
+}
+.section.on{
+    position: fixed; left: 0; top: 75px;
+    width: 100%;
+}
+.section li{
+    display: inline-block;
+    width: 24%;
+}
+.section a{
+    display: block;
+    color: #959595; font-size: 1.3rem; line-height: 50px;
+}
+.section .on a{
+    color: black;
+}
+
+/* .main */
+
+/* #story */
+#story{
+    padding: 27px 0 64px;
+    background: #f8f8f8;
+}
+.storyInner div{
+    width: 82.933%; height: 328px; margin: 0 auto; padding: 23px 14px;
+    border: 3px solid #f47933;
+    background: #fff url(../img/cjw-bg-smart.jpg) no-repeat right bottom/auto 315px;
+    color: #343434;
+}
+
+/* 39page 233-235 w/ teacher */
+.storyInner div:first-child ~ div{
+    display: none;
+}
+/* hw: 39page 236-243 DONE*/
+.storyInner div:nth-child(2){background-image: url(../img/cjw-bg-fresh.jpg); border-color: #01b5d6; background-size: auto 412px;}
+.storyInner div:nth-child(3){background-image: url(../img/cjw-bg-classic.jpg); border-color: #ef4665; background-size: auto 375px;}
+
+.storyInner div b{
+    display: block;
+    width: 72px; height: 31px; margin-bottom: 6px;
+    background: url(../img/cjw-logo-smart.png) no-repeat center/contain;
+    text-indent: -9999px;
+}
+
+/* hw: 39page 250-255 DONE*/
+.storyInner div:nth-child(2) b{background: url(../img/cjw-logo-fresh.png) no-repeat center/contain;}
+.storyInner div:nth-child(3) b{background: url(../img/cjw-logo-classic.png) no-repeat center/contain;}
+.storyInner div:nth-child(4) b{background: url(../img/cjw-logo-smart.png) no-repeat center/contain;}
+
+.storyInner div i{
+    line-height: 25px;
+    font-size: 2rem; font-style: normal; line-height: 1.25;
+}
+.storyInner div i span{
+    display: block;
+}
+.storyInner div p{
+    font-size: 1.3rem; line-height: 1.154;
+    margin:  13px 0 15px;
+}
+.storyInner div a{
+    display: block;
+    width: 150px; height: 35px;
+    border: 2px solid #cfcfcf;
+    text-align: center; color: #343434; line-height: 33px;
+    background: white;
+}
+.storyInner div a::after{
+    content: "";
+    display: inline-block;
+    width: 7px; height: 7px; margin-left: 15px;
+    background: url(../img/cjw-plus-story-orange.png) no-repeat center/contain;
+}
+
+/* hw: 40page 278-283 DONE*/ 
+.storyInner div:nth-child(2) a::after{background: url(../img/cjw-plus-story-blue.png) no-repeat center/contain;}
+.storyInner div:nth-child(3) a::after{background: url(../img/cjw-plus-story-red.png) no-repeat center/contain;}
+
+
+/* cast */
+#cast{
+    padding-bottom: 30px;
+    background: #f8f8f8;
+}
+.castInner .title{
+    height: 147px; padding-top: 39px; margin-bottom: 19px;
+    background: url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+    text-align: center;
+}
+.castInner h3{
+    margin-bottom: 12px;
+    color: white; font-weight: normal; font-size: 3.3rem;
+}
+/* hw: pdf 40page 299-310 DONE*/
+.castInner .title a{
+    display: inline-block;
+    height: 40px; width: 230px; 
+    border: 2px solid rgba(255,255,255,0.6); border-radius: 2px;
+    background: rgba(0,0,0,0.4);
+    color: white; font-size: 1.3rem; line-height: 38px;
+}
+.castInner .title a:after{
+    content: "";
+    display: inline-block;
+    width: 10px; height: 10px; margin-left: 11px;
+    background: url(../img/cjw-plus-section-blue.png) no-repeat center/contain;
+}
+
+.castInner .slider{
+    width: 82.933%; margin: 0 auto 61px; padding: 2px;
+    border: 1px solid rgba(149,149,149,0.6); border-radius: 3px;
+    background: white;
+}
+
+/* slider */
+
+.castInner .slider div:first-child ~ div{
+    display: none;
+}
+.castInner .slider div a{
+    display: block;
+    padding-bottom: 18px;
+    text-align: center;
+}
+.castInner .slider div a:before{
+    content: "";
+    display: block;
+    height: 199px; margin-bottom: 15px;
+    background: url(../img/cjw-img-foodCast.jpg) no-repeat center/cover;
+}
+.castInner .slider div a b,
+.castInner .slider div a p,
+.castInner .slider div a span{
+    display: none;
+}
+.castInner .slider div h4{
+    color: #626262; font-size: 1.3rem; font-weight: normal;
+}
+/* 40page-41 336-359 w/ teacher DONE*/
+.castInner .banner{
+    position: relative;
+    display: block;
+    width: 82.933%; margin: 0 auto 11px; border-radius: 3px; padding: 25px 51px 24px 99px;
+    background: #02b5d6 url(../img/cjw-icon-foodLab.png) no-repeat 13px 50%/58px;
+    color: black;
+}
+.castInner .banner:last-child{
+    background-color: #76d9c5; background-image: url(../img/cjw-icon-bottleRecipe.png);
+}
+.castInner .banner h4{
+    margin-bottom: 10px;
+    font-size: 2rem; font-weight: normal;
+}
+.castInner .banner p{
+    font-size: 1.1rem; line-height: 1.182; /* 22/26=1.182 */
+}
+.castInner .banner span{
+    position: absolute; top: 50%; right: 12px;
+    transform: translateY(-50%);
+    width: 16px; height: 28px;
+    background: url(../img/cjw-arrow-section-right.png) no-repeat center/contain;
+    text-indent: -9999px;
+}
+
+/* #knowhow */
+/* hw: 41page 361-408 */
+#knowhow{
+    padding-bottom: 36px;
+    background: #f8f8f8;
+}
+.knowhowInner .title{
+    height: 147px; padding-top: 36px; margin-bottom: 19px;
+    background: url(../img/cjw-bg-foodKnowhow-mobile.jpg) no-repeat center/cover;
+    text-align: center;
+}
+.knowhowInner .title h3{
+    color: white; font-size: 3.3rem; font-weight: normal;
+    padding-bottom: 15px;
+}
+.knowhowInner .title a{
+    display: inline-block;
+    width: 230px; height: 40px;
+    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(0, 0, 0, 0.4);
+    line-height: 38px; color: white; font-size: 1.3rem;
+}
+.knowhowInner .title a:after{
+    content: "";
+    display: inline-block;
+    width: 10px; height: 10px; margin-left: 11px;
+    background: url(../img/cjw-plus-section-yellow.png) no-repeat center/contain;
+}
+.knowhowInner .slider{
+    width: 82.933%; margin: 0 auto 61px; padding: 2px;
+    border: 1px solid rgba(149, 149, 149, 0.6); border-radius: 3px;
+    background: white;
+}
+/* slider */
+.knowhowInner .slider div:first-child ~ div{
+    display: none;
+}
+.knowhowInner .slider div a{
+    display: block;
+    padding-bottom: 17px;
+}
+.knowhowInner .slider p{
+    color: #626262; font-size: 1.3rem; font-weight: normal; line-height: 1.154 /*leading/fontsize*/;
+    text-align: center;
+}
+.knowhowInner .slider div a::before{
+    content: "";
+    display: block;
+    height: 199px; margin-bottom: 15px;
+    background: url(../img/cjw-img-specialRecipe.jpg) no-repeat center/cover;
+}
+
+.knowhowInner .slider div a b,
+.knowhowInner .slider a > span,
+.knowhowInner .slider div a h4{
+    display: none;
+}
+.knowhowInner .banner{
+    display: block; position: relative;
+    width: 82.933%; margin: 0 auto 11px; border-radius: 3px; padding: 25px 51px 24px 99px;
+    background: #76d9c5 url(../img/cjw-icon-cjwRecipe.png) no-repeat 12px 50%/58px;
+    color: black;
+}
+/* hw: pdf 41page-42 409-435 DONE*/
+.knowhowInner .bannerWrap .banner{
+    margin-bottom: 0;
+    background-color: #f4cb4d;
+    background-image: url(../img/cjw-icon-eShop.png);
+}
+.knowhowInner .bannerWrap a:nth-child(1),
+.knowhowInner .bannerWrap a:nth-child(2),
+.knowhowInner .bannerWrap a:last-child{
+    display: none;
+}
+.knowhowInner .banner h4{
+    font-size: 2rem; font-weight: normal;
+    margin-bottom: 10px;
+}
+.knowhowInner .banner p{
+    font-size: 1.1rem; line-height: 1.182;
+}
+.knowhowInner .banner span{
+    position: absolute; top: 50%; right: 12px;
+    width: 16px; height: 29px;
+    text-indent: -9999px;
+    transform: translateY(-50%);
+    background: url(../img/cjw-arrow-section-right.png) no-repeat center/contain;
+}
+
+
+/* #friends */
+/* hw: 42page 438 - 462 DONE*/
+
+#friends{
+    padding-bottom: 32px;
+    background: #f8f8f8;
+}
+.friendsInner .title{
+    height: 147px; padding-top: 36px; margin-bottom: 19px;
+    background: url(../img/cjw-bg-friends.jpg) no-repeat center/cover;
+    text-align: center;
+}
+.friendsInner .title h3{
+    color: white; font-size: 3.3rem; font-weight: normal;
+    padding-bottom: 14px;
+}
+.friendsInner .title a{
+    display: inline-block;
+    width: 230px; height: 40px;
+    background: rgba(0,0,0,0.4);
+    border: 2px solid rgba(255, 255, 255, 0.6); border-radius: 2px;
+    line-height: 38px; color: white; font-size: 1.3rem;
+}
+.friendsInner .title a:after{
+    content: "";
+    display: inline-block;
+    height: 10px; width: 10px; 
+    margin-left: 11px;
+    background: url(../img/cjw-plus-section-blue.png) no-repeat center/contain;
+}
+.friendsInner .banner{
+    display: block; position: relative;
+    width: 82.933%; margin: 0 auto 10px;
+}
+.friendsInner .banner:nth-of-type(1){
+    overflow: hidden;
+    background: #f4cb4d;
+    padding: 25px 11px;
+    color: black;
+}
+.friendsInner .banner:nth-of-type(1):before{
+    content: "";
+    position: absolute; bottom: 0; right: -28px;
+    width: 134px; height: 139px;
+    background: url(../img/cjw-icon-foodBox.png) no-repeat center/contain;
+}
+.friendsInner .banner:nth-of-type(1) b{
+    font-size: 1.8rem; line-height: 1.111; font-weight: normal;
+}
+.friendsInner .banner:nth-of-type(1) .line{
+    display: block;
+    background: rgba(255,255,255,0.5);
+    height: 2px; width: 67.524%; margin: 15px 0;
+}
+.friendsInner .banner:nth-of-type(1) p{
+    margin-bottom: 22px;
+    font-size: 1.1rem; line-height: 1.182; font-weight: normal;
+}
+/* hw: pdf 43page 491- 515 */
+
+.friendsInner .banner:nth-of-type(1) span:last-child{
+    display: block;
+    width: 145px; height: 35px;
+    background: rgba(255,255,255,0.5);
+    border: 2px solid white; border-radius: 2px;
+    text-align: center; line-height: 33px; font-size: 1.3rem;
+}
+.friendsInner .banner:nth-of-type(2){
+    padding: 25px 51px 24px 99px;
+    background: #02b5d6 url(../img/cjw-icon-friendsPanel.png) no-repeat 14px 50%/59px;
+    color: white;
+}
+.friendsInner .banner:nth-of-type(2) p{
+    font-size: 1.2rem; line-height: 1.083;
+}
+.friendsInner .banner:nth-of-type(2) h4{
+    font-size: 1rem; font-weight: normal;
+    margin-bottom: 9px;
+}
+.friendsInner .banner:nth-of-type(2) span{
+    position: absolute; top: 50%; right: 12px;
+    transform: translateY(-50%);
+    width: 16px; height: 29px;
+    text-indent: -99999px;
+    background: url(../img/cjw-arrow-section-right.png) no-repeat center/contain;
+}
+.friendsInner .box{
+    width: 82.933%; margin: 0 auto;
+}
+.friendsInner .bannerBox{
+    float: left;
+    padding-top: 13px;
+    width: 50%; height: 113px;  border: 2px solid #cfcfcf;
+    background: white;
+    text-align: center;
+}
+.friendsInner .bannerBox:last-child{
+    border-left: none;
+}
+.friendsInner .bannerBox h4{
+    padding-top: 70px;
+    background: url(../img/cjw-icon-foodEditor.png) no-repeat top center/62px;
+    color: black; font-size: 1.2rem; font-weight: normal;
+}
+.friendsInner .bannerBox:last-child h4{
+    background-image: url(../img/cjw-icon-meetingTalk.png);
+    background-position: 50% 5px;
+    background-size: 53px;
+}
+
+/* sns */
+#sns{
+    padding: 36px 0 33px;
+}
+.snsInner .title{
+    text-align: center;
+}
+.snsInner h3{
+    margin-bottom: 14px;
+    font-size: 3.3rem; font-weight: normal;
+}
+.snsInner .title p{
+    font-size: 1.4rem;
+    color: #4b4b4b;
+}
+.snsInner .sns{
+    text-align: center;
+    margin: 20px 0px 31px;
+}
+.snsInner .sns a{
+    display: inline-block;
+    width: 35px; height: 35px;
+    background: url(../img/cjw-sns-facebook.png) no-repeat center/contain;
+    text-indent: -9999px; margin-left: 20px;
+    
+}
+/* hw: pdf 44page 561-576 */
+.snsInner .sns a:nth-child(1){
+    margin-left: 0;
+}
+.snsInner .sns a:nth-child(2){
+    background-image: url(../img/cjw-sns-kakao.png);
+}
+.snsInner .sns a:nth-child(3){
+    background-image: url(../img/cjw-sns-blog.png);
+}
+.snsInner .sns a:nth-child(4){
+    background-image: url(../img/cjw-sns-twitter.png);
+}
+.snsInner .sns a:nth-child(5){
+    background-image: url(../img/cjw-sns-instagram.png);
+}
+.snsInner .sns a:nth-child(6){
+    background-image: url(../img/cjw-sns-youtube.png);
+}
+
+
+.snsInner .box{
+    width: 82.933%; margin: 0 auto;
+}
+.snsInner .box a{
+    display: block;
+    height: 160px; border: 2px solid #f8f7f7;
+}
+.snsInner .box a:last-child{
+    border-top: none;
+}
+.snsInner .box a:before{
+    content: "";
+    float: left;
+    width: 50%; height: 100%;
+    background: url(../img/cjw-img-snsNaver.jpg) no-repeat center/cover;
+}
+.snsInner .box a:last-child:before{
+    background-image: url(../img/cjw-img-snsFacebook.jpg);
+    float: right;
+}
+.snsInner .box .text{
+    float: left; position: relative;
+    width: 50%; height: 100%; padding: 18px 12px 0;
+}
+.snsInner .box h4{
+    height: 18px;
+    background: url(../img/cjw-sns-blog.png) no-repeat right center/contain;
+    color: black; font-size: 1.3rem; line-height: 18px; font-weight: normal;
+}
+.snsInner .box a:last-child h4{
+    background-image: url(../img/cjw-sns-facebook.png);
+}
+.snsInner .box p{
+    position: absolute; left: 0; bottom: 15px;
+    padding: 0 12px;
+    font-size: 1.3rem; color: #494949; line-height: 1.077;
+}
+
+/* footer */
+footer{
+    border-top: 1px solid #cfcfcf;
+    background: #fbfbfb;
+}
+footer a{
+    color: #767676;
+}
+.snsWrap > a{
+    display: block;
+    height: 50px; padding-left: 8.588%;
+    border-bottom: 1px solid #cfcfcf;
+    color: #02b5d6; font-size: 1.2rem; line-height: 50px;
+}
+.snsWrap li{
+    float: left;
+    width: 50%; border-bottom: 1px solid #cfcfcf;
+}
+.snsWrap li:nth-child(even){
+    border-left: 1px solid #cfcfcf;
+}
+.snsWrap li a{
+    display: block;
+    height: 50px; 
+    line-height: 50px; font-size: 1.2rem;
+    padding-left: 17.067%;
+}
+.snsWrap li a:hover,
+.snsWrap li a:focus{
+    color: black;
+}
+.copyWrap > span a{
+    float: left;
+    width: 50%; height: 50px; border-bottom: 1px solid #cfcfcf;
+    font-size: 1rem; line-height: 50px;
+    padding-left: 17.2%;
+    background: url(../img/cjw-logo-ccm.png) no-repeat 17.06% 50%/auto 25px ;
+}
+.copyWrap > span a:last-child{
+    border-left: 1px solid #cfcfcf;
+    background-image: url(../img/cjw-logo-wa.png);
+    background-size: auto 24px;
+}
+.copy{
+    margin-top: 29px;
+    text-align: center;
+}
+.copy img{
+    width: 40px; margin-bottom: 25px;
+}
+.copy p > span{
+    display: none;
+}
+.copy .phone{
+    color: #666; font-size: 1.1rem; line-height: 1.455; font-style: normal;
+}
+.copy .phone span:first-child:after{
+    content: "|";
+    margin: 0 11px;
+}
+.copy .phone span:last-child{
+    display: block;
+}
+footer small{
+    display: block;
+    color: #fbfbfb;
+    height: 45px; font-size: 1rem; line-height: 45px;
+    background: #666;
+    margin-top: 27px;
+}
+
+/* x >= 768px */
+@media  screen and (min-width: 768px){
+    body{
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    }
+    /*header*/
+    .navWrap{
+        height: 80px;
+    }
+    h1{
+        top: 26px;
+        width: 107px;
+    }
+    .searchWrap form > button{
+        top: 30px; left: 5.208%;
+        width: 30px; height: 30px;
+    }
+    .searchOn .close{
+        font-size: 2.1rem;
+    }
+    .searchOn input{
+        height: 40px; width: 71.615%; padding: 10px;
+        border-radius: 5px;
+        margin: 23px 1.953% 0;
+        font-size: 2.1rem;
+    }
+    /* hw: pdf 47page 28-31 */
+    .searchOn button{
+        height: 40px; width: 70px;
+        border-radius: 5px;
+        background-size: 20px;
+    }
+    .navBtn{
+        right: 5.208%; top: 32px;
+        width: 42px; height: 26px;
+    }
+    .navBtn span{
+        height: 6px; margin: 4px 0;border-radius: 6px;
+    }
+    .navBtn:before,
+    .navBtn:after{
+        height: 6px; border-radius: 6px;
+    }
+    .navInner{
+        width: 66.146%; padding-top: 29px;
+    }
+    .navInner strong{
+        margin-bottom: 16px;
+    }
+    .navInner strong span{
+        width: 100px; height: 35px;
+    }
+    .navInner strong > a{
+        line-height: 35px; font-size: 2.1rem;
+    }
+    .navInner ul > li > a{
+        height: 86px; line-height: 86px;
+        padding-left: 4.265%;
+        font-size: 2.5rem; line-height: 86px;
+    }
+    .navInner ul > li > a:after{
+        width: 20px; height: 10px;
+    }
+    .navInner ol a{
+        height: 70px; padding-left: 5.556%;
+        font-size: 2.1rem; line-height: 70px;
+    }
+    .navInner > a{
+        height: 100px; padding-left: 10.63%;
+        font-size: 2.5rem; line-height: 100px;
+    }
+    .navInner > a:after{
+        right: 12.205%;
+        width: 40px;height: 40px;
+    }
+    .visual{
+        height: 750px; padding-top: 180px;
+        margin-top: 80px;
+    }
+    .visual i{
+        margin-bottom: 23px;
+        font: 3.3rem nbgR, sans-serif; 
+    }
+    .visual b{
+        font: 7.5rem nbgR, sans-serif;
+    }
+    .visual p{
+        width: 66.667%; margin: 31px auto 33px;
+        font-size: 2.4rem;
+    }
+    .visual a{
+        width: 300px; height: 70px;
+        line-height: 68px;
+        font-size: 2.1rem;
+    }
+
+    /* section */
+    .section{
+        height: 70px;
+    }
+    .section.on{
+        top: 80px;
+    }
+    .section li{
+        width: auto;
+    }
+    .section li::before{
+        content: "|";
+        color: #959595; font-size: 1.7rem;
+    }
+    .section li:first-child::before{
+        content: none;
+    }
+    .section a{
+        display: inline-block;
+        padding: 0 25px;
+        font-size: 1.7rem; line-height: 70px;
+    }
+
+    /* main */
+    /* story */
+    #story{
+        padding: 36px 0 97px;
+    }
+    .storyInner{
+        width: 80.99%; margin: 0 auto;
+    }
+    .storyInner div{
+        float: left;
+        width: 49.518%; /* 308/622 */
+        height: 375px;
+        margin-left: 0.965%; padding: 22px;
+        border-width: 2px; border-radius: 4px;
+        background-size: auto 313px;
+    }
+    .storyInner div:first-child{
+        margin-left: 0;
+    }
+    /* slider */
+    #story .storyInner div:nth-child(2){
+        display: block; 
+    }
+    
+    /* hw: pdf 49page-52 139-end */
+
+    .storyInner div:nth-child(2){
+        background-size: auto 464px;
+    }
+    .storyInner div:nth-child(3){
+        background-size: auto 360px;
+    }
+    .storyInner div b{
+        margin-bottom: 13px;
+    }
+    .storyInner div p{
+        font-size: 1.7rem;
+    }
+    .storyInner div a{
+        width: 188px; height: 45px;
+        line-height: 43px; font-size: 1.5rem;
+    }
+    .storyInner div a::after{
+        height: 15px; width: 15px; margin-left: 18px;
+    }
+    /* cast */
+
+    #cast{
+        padding-bottom: 106px;
+    }
+    .castInner .title{
+        height: 294px; padding-top: 84px;
+    }
+    .castInner h3{
+        margin-bottom: 30px; 
+        font-size: 5.8rem;
+    }
+    .castInner .title a{
+        height: 70px; width: 350px;
+        font-size: 2.1rem; line-height: 68px;
+    }
+    .castInner .title a:after{
+        height: 20px; width: 20px; margin-left: 36px;
+    }
+    .castInner .slider{
+        width: 84.375%; padding: 3px; 
+        margin: 0 auto 86px;
+        border-radius: 5px; border-width: 2px;
+    }
+    /* slider */
+    .castInner .slider div a{
+        padding-bottom: 34px;
+    }
+    .castInner .slider div a:before{
+        height: 447px; margin-bottom: 30px;
+    }
+    .castInner .slider div h4{
+        font-size: 2.4rem;
+    }
+    .castInner .banner{
+        width: 84.375%; margin-bottom: 20px; border-radius: 5px;
+        padding: 57px 89px 54px 157px;
+        background-size: 88px; background-position: 28px;
+    }
+    .castInner .banner h4{
+        margin-bottom: 22px;
+        font-size: 3.3rem;
+    }
+    .castInner .banner p{
+        font-size: 2rem; line-height: 1.65;
+    }
+    .castInner .banner span{
+        right: 35px;
+        width: 29px; height: 55px;
+    }
+    /* #knowhow*/
+    #knowhow{
+        padding-bottom: 109px;
+    }
+    .knowhowInner .title{
+        height: 294px; padding-top: 83px; margin-bottom: 68px;
+    }
+    .knowhowInner .title h3{
+        font-size: 5.8rem;
+        padding-bottom: 30px;
+    }
+    .knowhowInner .title a{
+        width: 350px; height: 70px;
+        line-height: 68px;
+        font-size: 2.1rem;
+    }
+    .knowhowInner .title a:after{
+        width: 20px; height: 20px; margin-left: 36px;
+    }
+    .knowhowInner .slider{
+        width: 84.375%; margin-bottom: 109px;
+        border-width: 2px; border-radius: 5px;
+    }
+    .knowhowInner .slider div a{
+        padding-bottom: 34px;
+    }
+    .knowhowInner .slider p{
+        font-size: 2.4rem;
+    }
+    .knowhowInner .slider div a::before{
+        height: 429px; margin-bottom: 31px;
+    }
+    .knowhowInner .banner{
+        width: 84.375%; margin-bottom: 20px;
+        padding: 57px 89px 54px 212px;
+        border-radius: 5px;
+        background-size: 110px; background-position: 41px;
+    }
+    .knowhowInner .banner h4{
+        font-size: 3.3rem;
+        margin-bottom: 22px;
+    }
+    .knowhowInner .banner p{
+        font-size: 2rem; line-height: 1.65;
+    }
+    .knowhowInner .banner span{
+        right: 34px;
+        width: 29px; height: 55px;
+    }
+    /* friends */
+    #friends{
+        padding-bottom: 63px;
+    }
+    .friendsInner .title{
+        height: 294px; padding-bottom: 58px; margin-bottom: 38px;
+        padding-top: 84px;
+    }
+    .friendsInner .title h3{
+        font-size: 5.8rem;
+        padding-bottom: 31px;
+    }
+    .friendsInner .title a{
+        width: 350px; height: 70px;
+        font-size: 2.1rem; line-height: 68px;
+    }
+    .friendsInner .title a:after{
+        height: 20px; width: 20px;
+        margin-left: 41px;
+    }
+    .friendsInner .banner{
+        width: 84.375%; margin-bottom: 20px;
+    }
+    .friendsInner .banner:nth-of-type(1){
+        padding: 53px 36px;
+    }
+    .friendsInner .banner:nth-of-type(1):before{
+        width: 276px; height: 277px;
+    }
+    .friendsInner .banner:nth-of-type(1) b{
+        font-size: 3.3rem; line-height: 1.1;
+    }
+    .friendsInner .banner:nth-of-type(1) .line{
+        height: 3px; width: 64.915%;
+        margin: 31px 0;
+    }
+    .friendsInner .banner:nth-of-type(1) p{
+        margin-bottom: 46px; 
+        font-size: 2rem;
+    }
+    .friendsInner .banner:nth-of-type(1) span:last-child{
+        width: 250px; height: 70px;
+        font-size: 2.1rem;
+        line-height: 68px;
+    }
+    .friendsInner .banner:nth-of-type(2){
+        padding: 42px 87px 57px 211px;
+        background-size: 98px; background-position: 60px;
+    }
+    .friendsInner .banner:nth-of-type(2) p{
+        font-size: 2rem; line-height: 1.3;
+    }
+    .friendsInner .banner:nth-of-type(2) h4{
+        font-size: 1.8rem;
+        margin-bottom: 21px;
+    }
+    .friendsInner .banner:nth-of-type(2) span{
+        width: 29px; height: 55px; right: 33px;
+    }
+    .friendsInner .box{
+        width: 84.375%;
+    }
+    .friendsInner .bannerBox{
+        padding-top: 40px;
+        height: 225px;
+    }
+    .friendsInner .bannerBox h4{
+        padding-top: 141px;
+        background-size: 123px;
+        font-size: 2.1rem;
+    }
+    .friendsInner .bannerBox:last-child h4{
+        background-size: 106px;
+    }
+    /* sns */
+    #sns{
+        padding: 77px 0 86px;
+    }
+    .snsInner h3{
+        margin-bottom: 24px;
+        font-size: 5.8rem;
+    }
+    .snsInner .title p{
+        font-size: 2.1rem;
+    }
+    .snsInner .sns{
+        margin: 50px 0 62px;
+    }
+    .snsInner .sns a{
+        width: 70px; height: 70px;
+        margin-left: 40px;
+    }
+    .snsInner .sns a:nth-child(1){
+        margin-left: 0;
+    }
+    .snsInner .box{
+        width: 84.375%;
+    }
+    .snsInner .box a{
+        height: 280px;
+    }
+    .snsInner .box .text{
+        padding: 41px 22px 0;
+    }
+    .snsInner .box h4{
+        height: 36px;
+        font-size: 1.8rem;
+    }
+    .snsInner .box p{
+        bottom: 46px;
+        padding: 0 22px;
+        font-size: 2rem;
+    }
+    /* footer */
+    .snsWrap > a{
+        height: 100px; line-height: 100px; font-size: 2rem;
+    }
+    .snsWrap li a{
+        height: 100px; line-height: 100px; font-size: 2rem;
+    }
+    .copyWrap > span a{
+        height: 100px; line-height: 100px;
+        font-size: 2rem;
+        background-size: auto 33px;
+    }
+    .copyWrap > span a:last-child{
+        background-size: auto 42px;
+    }
+    .copy{
+        margin-top: 43px;
+    }
+    .copy img{
+        width: 80px; margin-bottom: 51px;
+    }
+    .copy .phone{
+       font-size: 2.2rem; line-height: 1.455;
+    }
+    .copy .phone span:first-child:after{
+        margin: 0 22px;
+    }
+    footer small{
+        height: 88px;
+        margin-top: 34px;
+        font-size: 1.8rem; line-height: 88px;
+        
+    }
+}
+/* >= 1024 px */
+@media screen and (min-width: 1024px){
+
+    /* reset */
+    .pc {display: block;}
+    .mobile {display: none;}
+
+    /* header */
+    .navWrap{
+        position: relative;
+        height: 134px;
+    }
+    header.on .navWrap{
+        position: fixed;
+        height: 70px;
+    }
+    h1{
+        top: -9999px; left: -9999px;
+    }
+    .searchWrap{
+        width: 88.477%; height: 56px; margin: 0 auto;
+    }
+    header.on .searchWrap{
+        display: none;
+    }
+    .searchWrap form{
+        float: left; position: relative;
+        margin-top: 20px;
+    }
+    .searchOn{
+        display: block;
+        position: static;
+        width: auto; height: auto;
+    }
+    .searchOn input{
+        width: 140px; height: 23px; margin: 0; padding: 5px;
+        border-bottom: 1px solid #969696;
+        border-radius: 0;
+        background: none;
+        font-size: 1.4rem;
+    }
+    .searchOn button{
+        position: absolute; bottom: 5px; right: -17px;
+        width: 15px; height: 15px;
+        background: url(../img/cjw-icon-search1.png) no-repeat center/contain;
+    }
+    .searchWrap .pc{
+        float: right; margin-top: 20px; 
+        height: 23px; line-height: 23px;
+    }
+    .searchWrap .pc a{
+        color: #808080; font-size: 1.4rem;
+    }
+    .searchWrap .pc a:first-child{
+        color: #00b4d8;
+    }
+    .searchWrap .pc a:before{
+        content: "|";
+        padding: 0 15px;
+    }
+    .searchWrap .pc a:first-child:before{
+        content: none;
+    }
+    header nav{
+        display: block; position: relative;
+        height: auto; border-top: 1px solid #cfcfcf;
+        background: none;
+    }
+    .navInner{
+        position: static; overflow: visible;
+        width: 88.477%;
+        padding-top: 0;
+        margin: 0 auto;
+    }
+    .navInner strong{
+        float: left;
+        width: auto; margin: 0;
+    }
+    .navInner strong span{
+        width: 120px; height: 42px;
+        margin-top: 18px;
+    }
+    /* hw: pdf 54page 78-80 */
+
+    .navInner ul{
+        float: right;
+        width: auto; margin-left: 0;
+        border-top: none;
+    }
+    .navInner ul > li{
+        float: left;
+    }
+    .navInner ul > li:before{
+        content: "|";
+        margin: 0 21px;
+        color: black; font-size: 1.6rem;
+    }
+    .navInner ul > li:first-child:before{
+        content: none;
+    }
+    .navInner ul > li > a{
+        display: inline-block;
+        height: 77px;
+        line-height: 77px;
+        padding-left: 0; border-bottom: none;
+        color: black; font-size: 1.6rem;
+    }
+    /* hw: pdf 54page 101-104 DONE */
+    header.on .navInner ul > li > a{
+        height: 69px; /* 70-1px = 69 */
+        font-size: 1.5rem; line-height: 69px;
+    }
+    .navInner ul > li > a:hover,
+    .navInner ul > li > a:focus,
+    .navInner ul > li.open > a{
+        color: #2fb7e6;
+    }
+    .navInner ul > li > a:after{
+        display: none;
+    }
+    .navInner ul > li.open > a:after{
+        display: block;
+        top: auto; right: 50%; bottom: -14px;
+        transform: translateX(50%);
+        width: 25px; height: 14px;
+        background: url(../img/cjw-arrow-nav-bottom-fill.png);
+    }
+    .navInner ul > li:last-child.open > a{
+        border-bottom: none;
+    }
+    .navInner .open .wrap{
+        position: absolute; left: 0; top: 77px;
+        width: 100%;
+        border-top: 1px solid #cfcfcf;
+        background: white;
+    }
+    header.on .navInner .open .wrap{
+        top: 69px;
+    }
+    .navInner .wrapInner{
+        width: 88.477%; margin: 0 auto;
+    }
+    .navInner .wrapNav{
+        height: 310px; padding: 10px 0;
+    }
+    .navInner .left{
+        float: left;
+        width: 51.876%; height: 100%; padding-top: 37px;
+        border-right: 1px solid #cfcfcf; /* 470/906 */
+    }
+    .navInner ol{
+        float: left;
+        width: 50%;
+        background: none;
+    }
+    .navInner ol li{
+        width: auto; margin-left: 0;
+        border-bottom: none;
+    }
+    .navInner ol a{
+        height: auto; padding-left: 0;
+        font-size: 2rem;
+        line-height: 2;
+    }
+    .navInner ol a:hover,
+    .navInner ol a:focus{
+        color: #2fb7e6;
+    }
+    .navInner .right{
+        display: block;
+        float: right;
+        width: 48.124%; height: 100%;
+        padding: 42px 0 0 35px;
+        background: url(../img/cjw-bg-nav-event.jpg) no-repeat right bottom;
+    }
+    .navInner li:nth-child(5) .right{
+        background-image: url(../img/cjw-bg-nav-friends.jpg);
+    }
+    .navInner .right b{
+        font-size: 3.4rem; font-weight: normal;
+    }
+    .navInner .right p{
+        margin: 16px 0 26px;
+        font-size: 1.6rem; color: #343434; line-height: 1.3;
+    }
+    .navInner .right a{
+        display: block;
+        width: 100px; height: 46px;
+        border: 2px solid #cfcfcf; font-size: 1.4rem; line-height: 44px;
+        color: #343434; text-align: center;
+        background: white;
+    }
+    .navInner .right a::after{
+        content: "";
+        display: inline-block;
+        width: 12px; height: 12px; margin-left: 19px;
+        background: url(../img/cjw-plus-story-blue.png) no-repeat center/contain;
+    }
+    .navInner > a{
+        display: none;
+    }
+} 
