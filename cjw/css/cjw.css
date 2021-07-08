@@ -1293,6 +1293,9 @@ footer small{
     .navInner ul > li:last-child.open > a{
         border-bottom: none;
     }
+    .navInner ul > li.open + li > a{
+        border-top: none;
+    }
     .navInner .open .wrap{
         position: absolute; left: 0; top: 77px;
         width: 100%;
@@ -1318,6 +1321,9 @@ footer small{
         width: 50%;
         background: none;
     }
+    .navInner li:nth-child(1) ol{
+        width: 33.333%;
+    }
     .navInner ol li{
         width: auto; margin-left: 0;
         border-bottom: none;
@@ -1341,6 +1347,18 @@ footer small{
     .navInner li:nth-child(5) .right{
         background-image: url(../img/cjw-bg-nav-friends.jpg);
     }
+    .navInner li:nth-child(4) .right{
+        background: none;
+    }
+    .navInner li:nth-child(3) .right{
+        background-image: url(../img/cjw-bg-nav-foodKnowhow.jpg);
+    }
+    .navInner li:nth-child(2) .right{
+        background-image: url(../img/cjw-bg-nav-foodCast.jpg);
+    }
+    .navInner li:nth-child(1) .right{
+        background-image: url(../img/cjw-bg-nav-brandStory.jpg);
+    }
     .navInner .right b{
         font-size: 3.4rem; font-weight: normal;
     }
@@ -1355,13 +1373,215 @@ footer small{
         color: #343434; text-align: center;
         background: white;
     }
+    .navInner li:nth-child(4) .right a{
+        display: inline-block;
+        width: 49px; height: 49px; margin-right: 10px;
+        background: url(../img/cjw-sns-facebook.png) no-repeat center/contain;
+        text-indent: -9999px;
+        border: none;
+    }
+    .navInner li:nth-child(4) .right a:nth-of-type(2){
+        background-image: url(../img/cjw-sns-kakao.png);
+    }
+    .navInner li:nth-child(4) .right a:nth-of-type(3){
+        background-image: url(../img/cjw-sns-blog.png);
+    }
+    .navInner li:nth-child(4) .right a:nth-of-type(4){
+        background-image: url(../img/cjw-sns-twitter.png);
+    }
+    .navInner li:nth-child(4) .right a:nth-of-type(5){
+        background-image: url(../img/cjw-sns-instagram.png);
+    }
+    .navInner li:nth-child(4) .right a:nth-of-type(6){
+        background-image: url(../img/cjw-sns-youtube.png);
+    }
     .navInner .right a::after{
         content: "";
         display: inline-block;
         width: 12px; height: 12px; margin-left: 19px;
         background: url(../img/cjw-plus-story-blue.png) no-repeat center/contain;
     }
+    .navInner li:nth-child(4) .right a:after{
+        content: none;
+    }
+    .navInner li:first-child .right a{
+        margin-top: 25px;
+    }
     .navInner > a{
         display: none;
+    }
+
+    /* visual */
+
+    header.on .visual{
+        margin-top: 70px;
+    }
+    .visual{
+        height: 833px;
+        padding-top: 167px; margin-top: 0px;
+    }
+    .visual i{
+        margin-bottom: 19px;
+        font-size: 3.7rem;
+    }
+    .visual b{
+        font-size: 8.3rem;
+    }
+    .visual p{
+        width: 78.516%; margin: 31px auto 47px;
+        font-size: 2.5rem; 
+    }
+    .visual a{
+        height: 80px;
+        line-height: 78px; font-size: 2.5rem;
+    }
+    .visual .pc{
+        display: none;
+    }
+
+    /* Section */
+    #story{
+        padding: 48px 0 102px;
+    }
+    .storyInner{
+        width: 82.129%;
+    }
+    .storyInner div{
+        height: 500px; width: 48.81%;
+        padding: 30px 35px;
+        margin-left: 2.378%;
+        background-size: auto 417px
+    }
+    .storyInner div:nth-child(2){
+        background-size: auto 618px;
+    }
+    .storyInner div:nth-child(3){
+        background-size: auto 480px;
+    }
+    .storyInner div b{
+        width: 96px; height: 41px;
+        margin-bottom: 29px;
+    }
+    .storyInner div i{
+        font-size: 2.5rem; line-height: 1.333;
+    }
+    .storyInner div p{
+        margin: 20px 0 41px;
+        font-size: 2.1rem; line-height: 1.19;
+    }
+    .storyInner div a{
+        width: 250px; height: 60px;
+        font-size: 2rem; line-height: 58px;
+    }
+    .storyInner div a::after{
+        height: 20px; width: 20px; margin-left: 25px;
+    }
+
+    /* cast */
+    #cast{
+        padding: 73px 0 76px;
+        background: url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+    }
+    .castInner{
+        width: 82.129%; margin: 0 auto;
+    }
+    .castInner .title{
+        background: none;
+        float: left;
+        padding: 0; margin-bottom: 0;
+        width: 38.763%; height: 250px;
+        text-align: left;
+    }
+    .castInner .title a{
+        height: 78px; width: 290px;
+        line-height: 76px; text-align: center;
+    }
+    .castInner .title a:after{
+        margin-left: 11px;
+    }
+    .castInner h3{
+        padding-bottom: 27px;
+    }
+    .castInner .slider{
+        float: right;
+        width: 61.237%; height: 780px; 
+        border: none; border-radius: 5px 5px 5px 0;
+    }
+    .castInner .slider div a::before {
+        margin-bottom: 39px;
+    }   
+    .castInner .slider div a b,
+    .castInner .slider div a p,
+    .castInner .slider div a span{
+        display: block;
+    }
+    .castInner .slider div a b{
+        font-size: 3.3rem; font-weight: normal;
+        color: black;
+    }
+    .castInner .slider div b::after{
+        content: "";
+        display: block;
+        margin: 17px auto 16px;
+        width: 60px; height: 3px;
+        background: #7fdaeb;
+    }
+    .castInner .slider div h4{
+        font-size: 2.1rem; color: black;
+        margin-bottom: 12px;
+    }
+    .castInner .slider div a p{
+        font-size: 1.6rem; line-height: 1.176; color: #909090;
+        padding: 0 30px 19px;
+    }
+    .castInner .slider div a span{
+        margin: 0 auto;
+        width: 200px; height: 50px;
+        background: #00b5d8;
+        border-radius: 2px;
+        line-height: 50px; font-size: 2.1rem; color: white
+    }
+    .castInner .banner{
+        float: left;
+        width: 38.763%; height: 250px;
+        margin-bottom: 0;
+        background-color: white; background-image: none;
+        border-radius: 5px 0 0 0;
+        padding: 30px 30px 0; /* 39 60 */
+        text-align: center;
+    }
+    .castInner .banner:nth-of-type(2){
+        border-radius: 0 0 0 5px;
+        height: 280px;
+        background-image: none; background: #02b5d6;
+    }
+    .castInner .banner h4{
+        margin-bottom: 0; 
+    }
+    .castInner .banner h4::after{
+        content: "";
+        display: block;
+        margin: 17px auto 16px;
+        width: 60px; height: 3px;
+        background: #7fdaeb;
+    }
+    .castInner .banner:nth-of-type(2) h4::after{
+        background: #b4e9f3;
+    }
+    .castInner .banner p{
+        font-size: 2.1rem; line-height: 1.109;
+        margin-bottom: 20px;
+    }
+    .castInner .banner span{
+        position: static; display: inline-block;
+        transform: translateY(0);
+        width: 200px; height: 50px; border-radius: 2px;
+        background: #00b5d8;
+        color: #fff; font-size: 2.1rem; line-height: 50px; font-weight: normal;
+        text-indent: 0;
+    }
+    .castInner .banner:nth-of-type(2) span{
+        background: white; 
+        color: black;
     }
 } 
